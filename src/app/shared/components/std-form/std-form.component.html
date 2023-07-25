@@ -1,0 +1,25 @@
+<h3 class="bg-dark text-white text-center p-3">Book Details</h3>
+      <div class="form-group">
+        <label for="bName">Book Name</label>
+        <input type="text" name="" id="bName" 
+        class="form-control" [(ngModel)]="titleVal" #bName>
+      </div>
+      <div class="form-group">
+        <label for="aName">Author Name</label>
+        <input type="text" name="aName" id="" 
+        class="form-control"  [(ngModel)]="authorVal" #aName>
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" name="price" id="" 
+        class="form-control" [(ngModel)]="priceVal">
+      </div>
+      <div class="form-group">
+        <label for="contact">Info</label>
+        <input type="text" name="contact" id="" 
+        class="form-control" [(ngModel)]="infoVal" >
+      </div>
+      <div class="text-right">
+        <div class="btn btn-primary" 
+        (click)="onAddBook()">Add Book Info</div>
+      </div>

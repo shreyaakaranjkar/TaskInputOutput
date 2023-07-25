@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-sm-12">
+        <ul class="nav nav-pills nav-item">
+            <a href="#" class="nav-link" [ngClass]="{active : data ==='AuthorInfo'}"
+            (click)="onDataChange('AuthorInfo')">Author Info</a>
+            <a href="#"  class="nav-link" [ngClass]="{active : data ==='BookInfo'}"
+            (click)="onDataChange('BookInfo')">Book Info</a>
+            <a href="#"  class="nav-link" [ngClass]="{active : data ==='PubInfo'}"
+            (click)="onDataChange('PubInfo')">Publication Info</a>
+        </ul>
+    </div>
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div *ngIf="data==='AuthorInfo'">
+                        <strong>Author Info</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ex.
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div *ngIf="data==='BookInfo'">
+                       <strong>BookInfo</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, placeat? 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div *ngIf="data==='PubInfo'">
+                        <strong>PubInfo</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, recusandae.
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

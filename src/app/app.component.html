@@ -1,0 +1,30 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-sm-6 alert-alert-info">data</div>
+    <hr>
+    <h3>Pass Data as Input  - Parent to Child</h3>
+    <hr>
+    <app-child [msgFromParent]="sendMsgtoChild" (msgToParent)="msgFromChild($event)"></app-child>
+  </div>
+  <div class="row">
+     <app-books-data [booksdata]="booksInfo"></app-books-data>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <app-std-form (addStdInfo)="onStdAdded($event)"></app-std-form>
+    </div>
+    <div class="col-sm-6">
+      <app-std-table [booksInfo]="booksInfo"></app-std-table>
+    </div>
+  </div>
+  <div class="row">
+    <app-author-info></app-author-info>
+  </div>
+  <div class="row">
+    <app-users (sendUserData)="userData($event)"></app-users>
+    <p>{{msgFromuser}}</p>
+  </div>
+</div>
